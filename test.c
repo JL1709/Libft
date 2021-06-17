@@ -6,7 +6,7 @@
 /*   By: jludt <jludt@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/16 10:40:04 by jludt             #+#    #+#             */
-/*   Updated: 2021/06/16 16:38:09 by jludt            ###   ########.fr       */
+/*   Updated: 2021/06/17 12:12:10 by jludt            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -203,26 +203,45 @@ int main(void)
 
     // printf("\n");
 
-    //Testfunction for ft_atoi
-    printf("Testing atoi:\n");
-    printf("a = %i (atoi)\n", atoi("a"));
-    printf("1234a = %i (atoi)\n", atoi("1234a"));
-    printf("-1234a = %i (atoi)\n", atoi("-1234a"));
-    printf("1234a4321 = %i (atoi)\n", atoi("1234a4321"));
-    printf("-1 = %i (atoi)\n", atoi("-1"));
-    printf("--1 = %i (atoi)\n", atoi("--1"));
-    printf("-+1 = %i (atoi)\n", atoi("-+1"));
-    printf("+-1 = %i (atoi)\n", atoi("+-1"));
-    printf("0 = %i (atoi)\n", atoi("0"));
-    printf("-0 = %i (atoi)\n", atoi("-0"));
-    printf("1 = %i (atoi)\n", atoi("1"));
-    printf("+1 = %i (atoi)\n", atoi("+1"));
-    printf("++1 = %i (atoi)\n", atoi("++1"));
-    printf(""" = %i (atoi)\n", atoi(""));
-    printf("-2147483648 = %i (atoi)\n", atoi("-2147483648"));
-    printf("-2147483649 = %i (atoi)\n", atoi("-2147483649"));
-    printf("2147483647 = %i (atoi)\n", atoi("2147483647"));
-    printf("214748364842 = %i (atoi)\n", atoi("214748364842"));
+    // //Testfunction for ft_atoi
+    // printf("Testing atoi:\n");
+    // printf("a = %i (atoi)\n", atoi("a"));
+    // printf(" a = %i (atoi)\n", atoi(" a"));
+    // printf("a123 = %i (atoi)\n", atoi("a123"));
+    // printf("1234a = %i (atoi)\n", atoi("1234a"));
+    // printf("-1234a = %i (atoi)\n", atoi("-1234a"));
+    // printf("1234a4321 = %i (atoi)\n", atoi("1234a4321"));
+    // printf("-1 = %i (atoi)\n", atoi("-1"));
+    // printf("--1 = %i (atoi)\n", atoi("--1"));
+    // printf("-+1 = %i (atoi)\n", atoi("-+1"));
+    // printf("+-1 = %i (atoi)\n", atoi("+-1"));
+    // printf("0 = %i (atoi)\n", atoi("0"));
+    // printf("-0 = %i (atoi)\n", atoi("-0"));
+    // printf("1 = %i (atoi)\n", atoi("1"));
+    // printf("+1 = %i (atoi)\n", atoi("+1"));
+    // printf("++1 = %i (atoi)\n", atoi("++1"));
+    // printf("= %i (atoi)\n", atoi(""));
+    // printf(" = %i (atoi)\n", atoi(" "));
+    // printf(" 123 = %i (atoi)\n", atoi(" 123"));
+    // printf(" -123 = %i (atoi)\n", atoi(" -123"));
+    // printf(" +123 = %i (atoi)\n", atoi(" +123"));
+    // printf(" -+123 = %i (atoi)\n", atoi(" -+123"));
+    // printf("     456 = %i (atoi)\n", atoi("     456"));
+    // printf("     -456 = %i (atoi)\n", atoi("     -456"));
+    // printf("-2147483648 = %i (atoi)\n", atoi("-2147483648"));
+    // printf("-2147483649 = %i (atoi)\n", atoi("-2147483649"));
+    // printf("2147483647 = %i (atoi)\n", atoi("2147483647"));
+    // printf("214748364842 = %i (atoi)\n", atoi("214748364842"));
+    
+    printf("Test = %i\n", ft_atoi("Test"));
+    printf("1 = %i\n", ft_atoi("1"));
+    printf("+1 = %i\n", ft_atoi("+1"));
+    printf("-1 = %i\n", ft_atoi("-1"));
+    printf(" -1 = %i\n", ft_atoi(" -1"));
+    printf(" 1 = %i\n", ft_atoi(" 1"));
+    printf(" +1 = %i\n", ft_atoi(" +1"));
+    printf("  +1 = %i\n", ft_atoi("  +1"));
+
  
 }
 
