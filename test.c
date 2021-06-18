@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   test.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jludt <jludt@student.42.fr>                +#+  +:+       +#+        */
+/*   By: julian <julian@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/16 10:40:04 by jludt             #+#    #+#             */
-/*   Updated: 2021/06/17 12:12:10 by jludt            ###   ########.fr       */
+/*   Updated: 2021/06/18 18:05:15 by julian           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -233,15 +233,18 @@ int main(void)
     // printf("2147483647 = %i (atoi)\n", atoi("2147483647"));
     // printf("214748364842 = %i (atoi)\n", atoi("214748364842"));
     
-    printf("Test = %i\n", ft_atoi("Test"));
+    /*printf("Test = %i\n", ft_atoi("Test"));
     printf("1 = %i\n", ft_atoi("1"));
     printf("+1 = %i\n", ft_atoi("+1"));
     printf("-1 = %i\n", ft_atoi("-1"));
     printf(" -1 = %i\n", ft_atoi(" -1"));
     printf(" 1 = %i\n", ft_atoi(" 1"));
     printf(" +1 = %i\n", ft_atoi(" +1"));
-    printf("  +1 = %i\n", ft_atoi("  +1"));
+    printf("  +1 = %i\n", ft_atoi("       +1"));
+    printf("123 = %i\n", ft_atoi("123"));
+    printf("-456378 = %i\n", ft_atoi("-456378")); */
 
+    //Testfunction for ft_memset
  
 }
 
