@@ -6,7 +6,7 @@
 /*   By: julian <julian@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/16 10:40:04 by jludt             #+#    #+#             */
-/*   Updated: 2021/06/19 17:21:18 by julian           ###   ########.fr       */
+/*   Updated: 2021/06/19 17:40:42 by julian           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -286,7 +286,7 @@ int main(void)
     printf("%s (src_ft_memcpy)\n", src_ft_memcpy);
     printf("%s (dest_ft_memcpy)\n", dest_ft_memcpy); */
 
-    //Testfunction for ft_memccpy
+    /* //Testfunction for ft_memccpy
     char *src_memccpy = "testing of the memccpy function";
     char dest_memccpy[100];
     printf("%s (src_memccpy)\n", src_memccpy);
@@ -299,9 +299,21 @@ int main(void)
     printf("%s (src_ft_memccpy)\n", src_ft_memccpy);
     ft_memccpy(dest_ft_memccpy, src_ft_memccpy, 'i', 2);
     printf("%s (src_ft_memccpy)\n", src_ft_memccpy);
-    printf("%s (dest_ft_memccpy)\n", dest_ft_memccpy);
+    printf("%s (dest_ft_memccpy)\n", dest_ft_memccpy); */
 
-
-
+    //Testfunction for ft_memccpy
+    char *src_memmove = "testing of the memmove function";
+    char dest_memmove[100];
+    printf("%s (src_memmove)\n", src_memmove);
+    memmove(dest_memmove, src_memmove, 6);
+    printf("%s (src_memmove)\n", src_memmove);
+    printf("%s (dest_memmove)\n", dest_memmove);
+    printf("\n");
+    char *src_ft_memmove = "testing of the memmove function";
+    char dest_ft_memmove[100];
+    printf("%s (src_ft_memmove)\n", src_ft_memmove);
+    ft_memmove(dest_ft_memmove, src_ft_memmove, 6);
+    printf("%s (src_ft_memmove)\n", src_ft_memmove);
+    printf("%s (dest_ft_memmove)\n", dest_ft_memmove);
 }
 
