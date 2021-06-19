@@ -6,7 +6,7 @@
 /*   By: julian <julian@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/16 10:40:04 by jludt             #+#    #+#             */
-/*   Updated: 2021/06/18 18:05:15 by julian           ###   ########.fr       */
+/*   Updated: 2021/06/19 17:21:18 by julian           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,12 @@ int     ft_isalpha(int c);
 int     ft_isdigit(int c);
 int     ft_isalnum(int c);
 int     ft_atoi(const char *str);
+void    *ft_memset(void *s, int c, size_t n);
+void    ft_bzero(void *s, size_t n);
+void    *ft_memcpy(void *dest, const void *src, size_t n);
+void    *ft_memccpy(void *dest, const void *src, int c, size_t n);
+void    *ft_memmove(void *dest, const void *src, size_t n);
+
 
 int main(void)
 {
@@ -244,7 +250,58 @@ int main(void)
     printf("123 = %i\n", ft_atoi("123"));
     printf("-456378 = %i\n", ft_atoi("-456378")); */
 
-    //Testfunction for ft_memset
- 
+    
+    ////Testfunction for ft_memset
+    //char s_memset[] = "testing of the memset function";
+    //printf("%s (memset)\n", s_memset);
+    //memset(s_memset, '*', 5);
+    //printf("%s (memset)\n", s_memset);
+    //char s_ft_memset[] = "testing of the memset function";
+    //printf("%s (ft_memset)\n", s_ft_memset);
+    //ft_memset(s_ft_memset, '*', 5);
+    //printf("%s (ft_memset)\n", s_ft_memset); 
+
+    /*//Testfunction for ft_bzero
+    char s_bzero[] = "testing of the bzero function";
+    printf("%s (bzero)\n", s_bzero);
+    bzero(s_bzero + 3, 5);
+    printf("%s (bzero)\n", s_bzero);
+    char s_ft_bzero[] = "testing of the bzero function";
+    printf("%s (ft_bzero)\n", s_ft_bzero);
+    ft_bzero(s_ft_bzero + 3, 5);
+    printf("%s (ft_bzero)\n", s_ft_bzero); */
+
+    /* //Testfunction for ft_memcpy
+    char *src_memcpy = "testing of the memcpy function";
+    char dest_memcpy[100];
+    printf("%s (src_memcpy)\n", src_memcpy);
+    memcpy(dest_memcpy, src_memcpy + 1, 5);
+    printf("%s (src_memcpy)\n", src_memcpy);
+    printf("%s (dest_memcpy)\n", dest_memcpy);
+    printf("\n");
+    char *src_ft_memcpy = "testing of the memcpy function";
+    char dest_ft_memcpy[100];
+    printf("%s (src_ft_memcpy)\n", src_memcpy);
+    ft_memcpy(dest_ft_memcpy, src_ft_memcpy + 1, 5);
+    printf("%s (src_ft_memcpy)\n", src_ft_memcpy);
+    printf("%s (dest_ft_memcpy)\n", dest_ft_memcpy); */
+
+    //Testfunction for ft_memccpy
+    char *src_memccpy = "testing of the memccpy function";
+    char dest_memccpy[100];
+    printf("%s (src_memccpy)\n", src_memccpy);
+    memccpy(dest_memccpy, src_memccpy, 'i', 2);
+    printf("%s (src_memccpy)\n", src_memccpy);
+    printf("%s (dest_memccpy)\n", dest_memccpy);
+    printf("\n");
+    char *src_ft_memccpy = "testing of the memccpy function";
+    char dest_ft_memccpy[100];
+    printf("%s (src_ft_memccpy)\n", src_ft_memccpy);
+    ft_memccpy(dest_ft_memccpy, src_ft_memccpy, 'i', 2);
+    printf("%s (src_ft_memccpy)\n", src_ft_memccpy);
+    printf("%s (dest_ft_memccpy)\n", dest_ft_memccpy);
+
+
+
 }
 
