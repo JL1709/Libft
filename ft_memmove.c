@@ -6,10 +6,11 @@
 /*   By: julian <julian@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/19 17:19:46 by julian            #+#    #+#             */
-/*   Updated: 2021/06/19 17:53:52 by julian           ###   ########.fr       */
+/*   Updated: 2021/06/20 09:35:33 by julian           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdio.h>
 #include <stddef.h>
 
 // The  memmove()  function  copies n bytes from memory area src to memory area dest.  
@@ -23,7 +24,7 @@ void    *ft_memmove(void *dest, const void *src, size_t n)
 {
     unsigned char       *cache_dest;
     const unsigned char *cache_src;
-    unsigned char       temp_array[100];
+    unsigned char       temp_array[n];
     int                 i;
     
     cache_dest = dest;
@@ -31,10 +32,9 @@ void    *ft_memmove(void *dest, const void *src, size_t n)
     i = 0;
     while (n--)
         temp_array[i++] = *cache_src++;
-
-    temp_array[i+1] = '\0';
+    temp_array[i] = '\0';
     i = 0;
-    while (temp_array[i++] != '\0')
+    while (temp_array[i] != '\0')
         *cache_dest++ = temp_array[i++];
     *cache_dest = '\0';
     return (dest); 

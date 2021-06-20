@@ -6,7 +6,7 @@
 /*   By: julian <julian@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/16 10:40:04 by jludt             #+#    #+#             */
-/*   Updated: 2021/06/19 17:40:42 by julian           ###   ########.fr       */
+/*   Updated: 2021/06/20 09:35:49 by julian           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -305,14 +305,14 @@ int main(void)
     char *src_memmove = "testing of the memmove function";
     char dest_memmove[100];
     printf("%s (src_memmove)\n", src_memmove);
-    memmove(dest_memmove, src_memmove, 6);
+    memmove(dest_memmove, src_memmove, 13);
     printf("%s (src_memmove)\n", src_memmove);
     printf("%s (dest_memmove)\n", dest_memmove);
     printf("\n");
     char *src_ft_memmove = "testing of the memmove function";
     char dest_ft_memmove[100];
     printf("%s (src_ft_memmove)\n", src_ft_memmove);
-    ft_memmove(dest_ft_memmove, src_ft_memmove, 6);
+    ft_memmove(dest_ft_memmove, src_ft_memmove, 13);
     printf("%s (src_ft_memmove)\n", src_ft_memmove);
     printf("%s (dest_ft_memmove)\n", dest_ft_memmove);
 }
