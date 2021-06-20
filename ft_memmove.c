@@ -6,11 +6,10 @@
 /*   By: julian <julian@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/19 17:19:46 by julian            #+#    #+#             */
-/*   Updated: 2021/06/20 09:35:33 by julian           ###   ########.fr       */
+/*   Updated: 2021/06/20 15:00:44 by julian           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
 #include <stddef.h>
 
 // The  memmove()  function  copies n bytes from memory area src to memory area dest.  

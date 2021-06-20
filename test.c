@@ -6,7 +6,7 @@
 /*   By: julian <julian@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/16 10:40:04 by jludt             #+#    #+#             */
-/*   Updated: 2021/06/20 09:35:49 by julian           ###   ########.fr       */
+/*   Updated: 2021/06/20 19:18:19 by julian           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,12 +15,14 @@
 //Necessary libraries to run tests
 #include <stdio.h>
 #include <string.h>
+#include <bsd/string.h>
 #include <ctype.h>
 #include <stdlib.h>
 
 //Prototypes of functions which shell be tested
 size_t  ft_strlen(const char *s);
-size_t  ft_strlcpy(char *restrict dst, const char *restrict src, size_t dstsize);
+size_t  ft_strlcpy(char *dst, const char *src, size_t size);
+size_t  ft_strlcat(char *dst, const char *src, size_t size);
 int     ft_tolower(int c);
 int     ft_toupper(int c);
 int     ft_isprint(int c);
@@ -34,6 +36,9 @@ void    ft_bzero(void *s, size_t n);
 void    *ft_memcpy(void *dest, const void *src, size_t n);
 void    *ft_memccpy(void *dest, const void *src, int c, size_t n);
 void    *ft_memmove(void *dest, const void *src, size_t n);
+void    *ft_memchr(const void *s, int c, size_t n);
+int     ft_memcmp(const void *s1, const void *s2, size_t n);
+char    *ft_strchr(const char *s, int c);
 
 
 int main(void)
@@ -52,13 +57,29 @@ int main(void)
     
     // printf("\n");
 
-    // //Testfunction for ft_strlcpy
-    // printf("Testing strlcpy\n");
-    // //Destination buffer
-    // char * restrict dst[100];
-    // const char * restrict src = "Testing strlcpy!";
-    // size_t dstsize = 100;
-    // /////TODO
+    /*// Testfunction for ft_strlcpy
+    const char *src_strlcpy = "Testing strlcpy!";
+    char dst_strlcpy[100];
+    char dst_ft_strlcpy[100];
+    printf("length = %lu (strlcpy)\n", strlcpy(dst_strlcpy, src_strlcpy, 5));
+    printf("length = %lu (ft_strlcpy)\n", ft_strlcpy(dst_ft_strlcpy, src_strlcpy, 5));
+    */
+
+    /* // Testfunction for ft_strlcat
+    char dst[] = "12345";
+    char *src = "678";
+    printf("%lu (strlcat)\n", strlcat(dst, src, 3));
+    printf("%s (strlcat)\n", dst);
+    printf("\n");
+    char dst2[] = "123";
+    printf("%lu (ft_strlcat)\n", ft_strlcat(dst2, src, 5));
+    printf("%s (ft_strlcat)\n", dst2); */
+
+    // Testfunction for ft_strchr
+    const char *s_strchr = "testing of the strchr function";
+    printf("%s (strchr)\n", strchr(s_strchr, 'z'));
+    printf("%s (ft_strchr)\n", ft_strchr(s_strchr, 'z'));
+
 
     // printf("\n");
 
@@ -301,19 +322,42 @@ int main(void)
     printf("%s (src_ft_memccpy)\n", src_ft_memccpy);
     printf("%s (dest_ft_memccpy)\n", dest_ft_memccpy); */
 
-    //Testfunction for ft_memccpy
+    /* //Testfunction for ft_memccpy
     char *src_memmove = "testing of the memmove function";
     char dest_memmove[100];
     printf("%s (src_memmove)\n", src_memmove);
-    memmove(dest_memmove, src_memmove, 13);
+    memmove(dest_memmove, src_memmove, 2);
     printf("%s (src_memmove)\n", src_memmove);
     printf("%s (dest_memmove)\n", dest_memmove);
     printf("\n");
     char *src_ft_memmove = "testing of the memmove function";
     char dest_ft_memmove[100];
     printf("%s (src_ft_memmove)\n", src_ft_memmove);
-    ft_memmove(dest_ft_memmove, src_ft_memmove, 13);
+    ft_memmove(dest_ft_memmove, src_ft_memmove, 2);
     printf("%s (src_ft_memmove)\n", src_ft_memmove);
-    printf("%s (dest_ft_memmove)\n", dest_ft_memmove);
+    printf("%s (dest_ft_memmove)\n", dest_ft_memmove); */
+
+    /* //Testfunction for ft_memchr
+    char *s_memchr = "testing of the memchr function";
+    printf("%s (s_memchr)\n", s_memchr);
+    char *s_find_memchr = memchr(s_memchr, 'o', 10);
+    printf("%s (s_memchr)\n", s_find_memchr);
+    printf("\n");
+    char *s_ft_memchr = "testing of the memchr function";
+    printf("%s (s_ft_memchr)\n", s_ft_memchr);
+    char *s_find_ft_memchr = ft_memchr(s_ft_memchr, 'o', 10);
+    printf("%s (s_ft_memchr)\n", s_find_ft_memchr); */
+
+    /* //Testfunction for ft_memcmp
+    char *s1_memcpm = "teating of the memcmp function";
+    char *s2_memcpm = "testing of the memcmp function";
+    printf("%i (memcmp)\n", memcmp(s1_memcpm, s2_memcpm, 10));
+    printf("\n");
+    char *s1_ft_memcpm = "teating of the memcmp function";
+    char *s2_ft_memcpm = "testing of the memcmp function";
+    printf("%i (ft_memcmp)\n", ft_memcmp(s1_ft_memcpm, s2_ft_memcpm, 10));
+    */
+
+
 }
 
