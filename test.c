@@ -6,7 +6,7 @@
 /*   By: julian <julian@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/16 10:40:04 by jludt             #+#    #+#             */
-/*   Updated: 2021/06/20 19:18:19 by julian           ###   ########.fr       */
+/*   Updated: 2021/06/20 22:30:30 by julian           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,7 @@ void    *ft_memmove(void *dest, const void *src, size_t n);
 void    *ft_memchr(const void *s, int c, size_t n);
 int     ft_memcmp(const void *s1, const void *s2, size_t n);
 char    *ft_strchr(const char *s, int c);
+char    *ft_strrchr(const char *s, int c);
 
 
 int main(void)
@@ -75,11 +76,23 @@ int main(void)
     printf("%lu (ft_strlcat)\n", ft_strlcat(dst2, src, 5));
     printf("%s (ft_strlcat)\n", dst2); */
 
-    // Testfunction for ft_strchr
+    /* // Testfunction for ft_strchr
     const char *s_strchr = "testing of the strchr function";
     printf("%s (strchr)\n", strchr(s_strchr, 'z'));
     printf("%s (ft_strchr)\n", ft_strchr(s_strchr, 'z'));
+    printf("%s (strchr)\n", strchr(s_strchr, 'i'));
+    printf("%s (ft_strchr)\n", ft_strchr(s_strchr, 'i'));
+    printf("%s (strchr)\n", strchr(s_strchr, '\0'));
+    printf("%s (ft_strchr)\n", ft_strchr(s_strchr, '\0')); */
 
+    // Testfunction for ft_strrchr
+    const char *s_strrchr = "testing of the strrchr function";
+    printf("%s (strrchr)\n", strrchr(s_strrchr, 'z'));
+    printf("%s (ft_strrchr)\n", ft_strrchr(s_strrchr, 'z'));
+    printf("%s (strrchr)\n", strrchr(s_strrchr, 'c'));
+    printf("%s (ft_strrchr)\n", ft_strrchr(s_strrchr, 'c'));
+    printf("%s (strrchr)\n", strrchr(s_strrchr, '\0'));
+    printf("%s (ft_strrchr)\n", ft_strrchr(s_strrchr, '\0')); 
 
     // printf("\n");
 
