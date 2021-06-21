@@ -6,7 +6,7 @@
 /*   By: julian <julian@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/20 14:03:02 by julian            #+#    #+#             */
-/*   Updated: 2021/06/20 14:59:44 by julian           ###   ########.fr       */
+/*   Updated: 2021/06/21 10:13:15 by julian           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ int ft_memcmp(const void *s1, const void *s2, size_t n)
     if (n == 0)
         return (0);
     i = 0;
-    while(n-- && cache_s1[i] == cache_s2[i])
+    while (n-- && cache_s1[i] == cache_s2[i])
         i++;
     return (cache_s1[i] - cache_s2[i]);
 }

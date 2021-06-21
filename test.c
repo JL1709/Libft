@@ -6,7 +6,7 @@
 /*   By: julian <julian@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/16 10:40:04 by jludt             #+#    #+#             */
-/*   Updated: 2021/06/20 22:30:30 by julian           ###   ########.fr       */
+/*   Updated: 2021/06/21 14:50:32 by julian           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,9 @@ void    *ft_memchr(const void *s, int c, size_t n);
 int     ft_memcmp(const void *s1, const void *s2, size_t n);
 char    *ft_strchr(const char *s, int c);
 char    *ft_strrchr(const char *s, int c);
+char    *ft_strnstr(const char *big, const char *little, size_t len);
+int     ft_strncmp(const char *s1, const char *s2, size_t n);
+char    *ft_strdup(const char *s);
 
 
 int main(void)
@@ -67,14 +70,94 @@ int main(void)
     */
 
     /* // Testfunction for ft_strlcat
-    char dst[] = "12345";
-    char *src = "678";
-    printf("%lu (strlcat)\n", strlcat(dst, src, 3));
-    printf("%s (strlcat)\n", dst);
+    char *src_strlcat = "6789";
+    printf("size = 0\n");
+    char dst_strlcat0[] = "12345";
+    printf("%lu (strlcat)\n", strlcat(dst_strlcat0, src_strlcat, 0));
+    printf("%s (strlcat)\n", dst_strlcat0);
+    char dst_ft_strlcat0[] = "12345";
+    printf("%lu (ft_strlcat)\n", ft_strlcat(dst_ft_strlcat0, src_strlcat, 0));
+    printf("%s (ft_strlcat)\n", dst_ft_strlcat0);
     printf("\n");
-    char dst2[] = "123";
-    printf("%lu (ft_strlcat)\n", ft_strlcat(dst2, src, 5));
-    printf("%s (ft_strlcat)\n", dst2); */
+    printf("size = 1\n");
+    char dst_strlcat1[] = "12345";
+    printf("%lu (strlcat)\n", strlcat(dst_strlcat1, src_strlcat, 1));
+    printf("%s (strlcat)\n", dst_strlcat1);
+    char dst_ft_strlcat1[] = "12345";
+    printf("%lu (ft_strlcat)\n", ft_strlcat(dst_ft_strlcat1, src_strlcat, 1));
+    printf("%s (ft_strlcat)\n", dst_ft_strlcat1);
+    printf("\n");
+    printf("size = 2\n");
+    char dst_strlcat2[] = "12345";
+    printf("%lu (strlcat)\n", strlcat(dst_strlcat2, src_strlcat, 2));
+    printf("%s (strlcat)\n", dst_strlcat2);
+    char dst_ft_strlcat2[] = "12345";
+    printf("%lu (ft_strlcat)\n", ft_strlcat(dst_ft_strlcat2, src_strlcat, 2));
+    printf("%s (ft_strlcat)\n", dst_ft_strlcat2);
+    printf("\n");
+    printf("size = 3\n");
+    char dst_strlcat3[] = "12345";
+    printf("%lu (strlcat)\n", strlcat(dst_strlcat3, src_strlcat, 3));
+    printf("%s (strlcat)\n", dst_strlcat3);
+    char dst_ft_strlcat3[] = "12345";
+    printf("%lu (ft_strlcat)\n", ft_strlcat(dst_ft_strlcat3, src_strlcat, 3));
+    printf("%s (ft_strlcat)\n", dst_ft_strlcat3);
+    printf("\n");
+    printf("size = 4\n");
+    char dst_strlcat4[] = "12345";
+    printf("%lu (strlcat)\n", strlcat(dst_strlcat4, src_strlcat, 4));
+    printf("%s (strlcat)\n", dst_strlcat4);
+    char dst_ft_strlcat4[] = "12345";
+    printf("%lu (ft_strlcat)\n", ft_strlcat(dst_ft_strlcat4, src_strlcat, 4));
+    printf("%s (ft_strlcat)\n", dst_ft_strlcat4);
+    printf("\n");
+    printf("size = 5\n");
+    char dst_strlcat5[] = "12345";
+    printf("%lu (strlcat)\n", strlcat(dst_strlcat5, src_strlcat, 5));
+    printf("%s (strlcat)\n", dst_strlcat5);
+    char dst_ft_strlcat5[] = "12345";
+    printf("%lu (ft_strlcat)\n", ft_strlcat(dst_ft_strlcat5, src_strlcat, 5));
+    printf("%s (ft_strlcat)\n", dst_ft_strlcat5);
+    printf("\n");
+    printf("size = 6\n");
+    char dst_strlcat6[] = "12345";
+    printf("%lu (strlcat)\n", strlcat(dst_strlcat6, src_strlcat, 6));
+    printf("%s (strlcat)\n", dst_strlcat6);
+    char dst_ft_strlcat6[] = "12345";
+    printf("%lu (ft_strlcat)\n", ft_strlcat(dst_ft_strlcat6, src_strlcat, 6));
+    printf("%s (ft_strlcat)\n", dst_ft_strlcat6);
+    printf("\n");
+    printf("size = 7\n");
+    char dst_strlcat7[] = "12345";
+    printf("%lu (strlcat)\n", strlcat(dst_strlcat7, src_strlcat, 7));
+    printf("%s (strlcat)\n", dst_strlcat7);
+    char dst_ft_strlcat7[] = "12345";
+    printf("%lu (ft_strlcat)\n", ft_strlcat(dst_ft_strlcat7, src_strlcat, 7));
+    printf("%s (ft_strlcat)\n", dst_ft_strlcat7);
+    printf("\n");
+    printf("size = 8\n");
+    char dst_strlcat8[] = "12345";
+    printf("%lu (strlcat)\n", strlcat(dst_strlcat8, src_strlcat, 8));
+    printf("%s (strlcat)\n", dst_strlcat8);
+    char dst_ft_strlcat8[] = "12345";
+    printf("%lu (ft_strlcat)\n", ft_strlcat(dst_ft_strlcat8, src_strlcat, 8));
+    printf("%s (ft_strlcat)\n", dst_ft_strlcat8);
+    printf("\n");
+    printf("size = 9\n");
+    char dst_strlcat9[] = "12345";
+    printf("%lu (strlcat)\n", strlcat(dst_strlcat9, src_strlcat, 9));
+    printf("%s (strlcat)\n", dst_strlcat9);
+    char dst_ft_strlcat9[] = "12345";
+    printf("%lu (ft_strlcat)\n", ft_strlcat(dst_ft_strlcat9, src_strlcat, 9));
+    printf("%s (ft_strlcat)\n", dst_ft_strlcat9);
+    printf("\n");
+    printf("size = 10\n");
+    char dst_strlcat10[] = "12345";
+    printf("%lu (strlcat)\n", strlcat(dst_strlcat10, src_strlcat, 10));
+    printf("%s (strlcat)\n", dst_strlcat10);
+    char dst_ft_strlcat10[] = "12345";
+    printf("%lu (ft_strlcat)\n", ft_strlcat(dst_ft_strlcat10, src_strlcat, 10));
+    printf("%s (ft_strlcat)\n", dst_ft_strlcat10); */
 
     /* // Testfunction for ft_strchr
     const char *s_strchr = "testing of the strchr function";
@@ -85,16 +168,30 @@ int main(void)
     printf("%s (strchr)\n", strchr(s_strchr, '\0'));
     printf("%s (ft_strchr)\n", ft_strchr(s_strchr, '\0')); */
 
-    // Testfunction for ft_strrchr
+    /* // Testfunction for ft_strrchr
     const char *s_strrchr = "testing of the strrchr function";
     printf("%s (strrchr)\n", strrchr(s_strrchr, 'z'));
     printf("%s (ft_strrchr)\n", ft_strrchr(s_strrchr, 'z'));
     printf("%s (strrchr)\n", strrchr(s_strrchr, 'c'));
     printf("%s (ft_strrchr)\n", ft_strrchr(s_strrchr, 'c'));
     printf("%s (strrchr)\n", strrchr(s_strrchr, '\0'));
-    printf("%s (ft_strrchr)\n", ft_strrchr(s_strrchr, '\0')); 
+    printf("%s (ft_strrchr)\n", ft_strrchr(s_strrchr, '\0')); */
 
     // printf("\n");
+
+    /* // Testfunction for ft_strnstr
+    const char *big_strnstr = "testing of the strnrstr function";
+    const char *little_strnstr = "of";
+    printf("%s (strnstr)\n", strnstr(big_strnstr, little_strnstr, 9));
+    printf("%s (ft_strnstr)\n", ft_strnstr(big_strnstr, little_strnstr, 9));
+    */    
+
+    /* // Testfunction for ft_strncmp
+    char *s1_strncmp = "testing of the strncmp function";
+    char *s2_strncmp = "testing of the strncmp function";
+    printf("%i (strncmp)\n", strncmp(s1_strncmp, s2_strncmp, 20));
+    printf("%i (ft_strncmp)\n", ft_strncmp(s1_strncmp, s2_strncmp, 20)); */
+    
 
     // //Testfunction for ft_tolower
     // printf("Testing tolower:\n");
@@ -371,6 +468,13 @@ int main(void)
     printf("%i (ft_memcmp)\n", ft_memcmp(s1_ft_memcpm, s2_ft_memcpm, 10));
     */
 
+    //Testfunction for ft_strdup
+    char *s_strdup = "testing the strdup function";
+    // char *s_duplicate_strdup = strdup(s_strdup);
+    printf("%s (original)\n", s_strdup);
+    printf("%s (strdup)\n", strdup(s_strdup));
+    printf("%s (ft_strdup)\n", ft_strdup(s_strdup));
 
+    
 }
 
