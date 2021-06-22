@@ -6,14 +6,14 @@
 /*   By: jludt <jludt@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/16 14:23:08 by jludt             #+#    #+#             */
-/*   Updated: 2021/06/16 14:32:49 by jludt            ###   ########.fr       */
+/*   Updated: 2021/06/22 11:24:39 by jludt            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_isascii(int c)
+int	ft_isascii(int c)
 {
-    if (c < 0 || c > 127)
-        return (0);
-    else   
-        return (1);
+	if (c < 0 || c > 127)
+		return (0);
+	else
+		return (1);
 }

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   test.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: julian <julian@student.42.fr>              +#+  +:+       +#+        */
+/*   By: jludt <jludt@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/16 10:40:04 by jludt             #+#    #+#             */
-/*   Updated: 2021/06/21 14:50:32 by julian           ###   ########.fr       */
+/*   Updated: 2021/06/22 12:15:10 by jludt            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 //Necessary libraries to run tests
 #include <stdio.h>
 #include <string.h>
-#include <bsd/string.h>
+// #include <bsd/string.h>
 #include <ctype.h>
 #include <stdlib.h>
 

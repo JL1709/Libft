@@ -6,14 +6,14 @@
 /*   By: jludt <jludt@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/16 14:48:32 by jludt             #+#    #+#             */
-/*   Updated: 2021/06/16 15:02:30 by jludt            ###   ########.fr       */
+/*   Updated: 2021/06/22 11:24:04 by jludt            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_isalpha(int c)
+int	ft_isalpha(int c)
 {
-    if ((c > 64 && c < 91) || (c > 96 && c < 123))
-        return (1);
-    else   
-        return (0);
+	if ((c > 64 && c < 91) || (c > 96 && c < 123))
+		return (1);
+	else
+		return (0);
 }

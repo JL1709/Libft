@@ -3,21 +3,28 @@
 /*                                                        :::      ::::::::   */
 /*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: julian <julian@student.42.fr>              +#+  +:+       +#+        */
+/*   By: jludt <jludt@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/21 15:11:51 by julian            #+#    #+#             */
-/*   Updated: 2021/06/21 17:02:52 by julian           ###   ########.fr       */
+/*   Updated: 2021/06/22 12:43:38 by jludt            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 
-void    *ft_calloc(size_t nmemb, size_t size)
+void	*ft_calloc(size_t count, size_t size)
 {
-    void    *ptr;
-    
-    if (nmemb == 0 || size == 0)
-        return (NULL)
-    ptr = malloc(nmemb * size);
-    return (ptr);
+	unsigned char		*ptr;
+
+	if (count == 0 || size == 0)
+		return (NULL);
+	ptr = malloc(count * size);
+	if (ptr == NULL)
+		return (NULL);
+	else
+	{
+		while (size--)
+			*ptr++ = '\0';
+	}
+	return (ptr);
 }

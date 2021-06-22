@@ -6,14 +6,14 @@
 /*   By: jludt <jludt@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/16 12:17:36 by jludt             #+#    #+#             */
-/*   Updated: 2021/06/16 14:32:37 by jludt            ###   ########.fr       */
+/*   Updated: 2021/06/22 11:55:32 by jludt            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_tolower(int c)
+int	ft_tolower(int c)
 {
-    if (c > 64 && c < 91)
-        return(c + 32);
-    else
-        return c;
+	if (c > 64 && c < 91)
+		return (c + 32);
+	else
+		return (c);
 }

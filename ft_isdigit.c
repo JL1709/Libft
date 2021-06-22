@@ -6,14 +6,14 @@
 /*   By: jludt <jludt@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/16 15:06:07 by jludt             #+#    #+#             */
-/*   Updated: 2021/06/16 15:07:36 by jludt            ###   ########.fr       */
+/*   Updated: 2021/06/22 11:24:58 by jludt            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_isdigit(int c)
+int	ft_isdigit(int c)
 {
-    if (c > 47 && c < 58)
-        return (1);
-    else   
-        return (0);
+	if (c > 47 && c < 58)
+		return (1);
+	else
+		return (0);
 }
