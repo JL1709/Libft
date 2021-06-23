@@ -6,37 +6,36 @@
 /*   By: jludt <jludt@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/21 14:27:43 by julian            #+#    #+#             */
-/*   Updated: 2021/06/22 11:44:12 by jludt            ###   ########.fr       */
+/*   Updated: 2021/06/23 12:54:23 by jludt            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
+#include "libft.h"
 
 /*
-** The strdup() function returns a pointer to a new string which is a 
-** duplicate of the string s.  Memory for the new string is obtained with 
-** malloc(3), and can be freed with free(3).
+** The strdup() function allocates sufficient memory for a copy of the 
+** string s1, does the copy, and returns a pointer to it.  
+** The pointer may subsequently be used as an argument to the function free(3).
 ** return value:
 ** On success, the strdup() function returns a pointer to the duplicated 
 ** string. It returns NULL if insufficient memory was available, with errno 
 ** set to indicate the cause of the error.
 */
 
-char	*ft_strdup(const char *s)
+char	*ft_strdup(const char *s1)
 {
 	char	*duplicate;
 	char	*cache;
 	int		s_len;
 
-	s_len = 0;
-	while (s[s_len] != '\0')
-		s_len++;
-	duplicate = (char *)malloc((sizeof(*s) * s_len) + 1);
+	s_len = ft_strlen(s1);
+	duplicate = (char *)malloc((sizeof(*s1) * s_len) + 1);
 	if (duplicate == NULL)
 		return (NULL);
 	cache = duplicate;
-	while (*s != '\0')
-		*cache++ = *s++;
+	while (*s1 != '\0')
+		*cache++ = *s1++;
 	*cache = '\0';
 	return (duplicate);
 }

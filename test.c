@@ -6,7 +6,7 @@
 /*   By: jludt <jludt@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/16 10:40:04 by jludt             #+#    #+#             */
-/*   Updated: 2021/06/22 12:15:10 by jludt            ###   ########.fr       */
+/*   Updated: 2021/06/23 11:15:33 by jludt            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -370,7 +370,7 @@ int main(void)
     // printf("2147483647 = %i (atoi)\n", atoi("2147483647"));
     // printf("214748364842 = %i (atoi)\n", atoi("214748364842"));
     
-    /*printf("Test = %i\n", ft_atoi("Test"));
+    printf("Test = %i\n", ft_atoi("Test"));
     printf("1 = %i\n", ft_atoi("1"));
     printf("+1 = %i\n", ft_atoi("+1"));
     printf("-1 = %i\n", ft_atoi("-1"));
@@ -379,7 +379,7 @@ int main(void)
     printf(" +1 = %i\n", ft_atoi(" +1"));
     printf("  +1 = %i\n", ft_atoi("       +1"));
     printf("123 = %i\n", ft_atoi("123"));
-    printf("-456378 = %i\n", ft_atoi("-456378")); */
+    printf("-456378 = %i\n", ft_atoi("-456378")); 
 
     
     ////Testfunction for ft_memset
@@ -468,12 +468,12 @@ int main(void)
     printf("%i (ft_memcmp)\n", ft_memcmp(s1_ft_memcpm, s2_ft_memcpm, 10));
     */
 
-    //Testfunction for ft_strdup
-    char *s_strdup = "testing the strdup function";
-    // char *s_duplicate_strdup = strdup(s_strdup);
-    printf("%s (original)\n", s_strdup);
-    printf("%s (strdup)\n", strdup(s_strdup));
-    printf("%s (ft_strdup)\n", ft_strdup(s_strdup));
+    // //Testfunction for ft_strdup
+    // char *s_strdup = "testing the strdup function";
+    // // char *s_duplicate_strdup = strdup(s_strdup);
+    // printf("%s (original)\n", s_strdup);
+    // printf("%s (strdup)\n", strdup(s_strdup));
+    // printf("%s (ft_strdup)\n", ft_strdup(s_strdup));
 
     
 }

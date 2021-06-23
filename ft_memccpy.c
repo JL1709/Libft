@@ -6,7 +6,7 @@
 /*   By: jludt <jludt@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/19 15:07:14 by julian            #+#    #+#             */
-/*   Updated: 2021/06/22 11:28:00 by jludt            ###   ########.fr       */
+/*   Updated: 2021/06/23 12:20:15 by jludt            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,24 +22,20 @@
 ** or NULL if c was not found in the first n characters of src.
 */
 
-void	*ft_memccpy(void *dest, const void *src, int c, size_t n)
+void	*ft_memccpy(void *restrict dest, const void *restrict src, int c, size_t n)
 {
-	unsigned char		*cache_dest;
-	const unsigned char	*cache_src;
-	int					null;
+	unsigned char	*cache_dest;
+	unsigned char	*cache_src;
 
-	cache_dest = dest;
-	cache_src = src;
-	null = 0;
-	while (n-- && *cache_src != c)
+	cache_dest = (unsigned char *)dest;
+	cache_src = (unsigned char *)src;
+	while (n--)
 	{
-		*cache_dest++ = *cache_src++;
-		if (*cache_src == c)
-			null = 1;
-	}
-	if (null == 0)
-		return (NULL);
-	else
 		*cache_dest = *cache_src;
-	return (dest);
+		if (*cache_src == (unsigned char)c)
+			return (++cache_dest);
+		cache_src++;
+		cache_dest++;
+	}
+	return (NULL);
 }

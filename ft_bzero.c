@@ -6,15 +6,15 @@
 /*   By: jludt <jludt@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/19 12:41:06 by julian            #+#    #+#             */
-/*   Updated: 2021/06/22 11:20:52 by jludt            ###   ########.fr       */
+/*   Updated: 2021/06/23 11:56:11 by jludt            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
 
 /*
-** The bzero() function erases the data in the n bytes of the memory starting at 
-** the location pointed to by s, by writing zeros (bytes containing '\0') 
+** The bzero() function writes n zeroed bytes to the string s.  
+** If n is zero, bzero() does nothing. 
 ** to that area.
 ** return value: none
 */

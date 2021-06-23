@@ -6,36 +6,34 @@
 /*   By: jludt <jludt@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/19 17:19:46 by julian            #+#    #+#             */
-/*   Updated: 2021/06/22 12:44:01 by jludt            ###   ########.fr       */
+/*   Updated: 2021/06/23 12:52:54 by jludt            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
+#include "libft.h"
 
 /*
-** The  memmove()  function  copies n bytes from memory area src to memory
-** area dest. The memory areas may overlap: copying takes place as though 
-** the bytes in src are first copied into a temporary array that does not overlap
-** src or dest, and the bytes are then copied from the temporary array to dest.
-** return value: a pointer to dest
+** The memmove() function copies len bytes from string src to string dst.  
+** The two strings may overlap; 
+** the copy is always done in a non-destructive manner.
+** return value: the original value of dst
 */
 
-void	*ft_memmove(void *dest, const void *src, size_t n)
+void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	unsigned char		*cache_dest;
-	const unsigned char	*cache_src;
-	unsigned char		temp_array[n];
-	int					i;
+	unsigned char	*cache_dst;
+	unsigned char	*cache_src;
 
-	cache_dest = dest;
-	cache_src = src;
-	i = 0;
-	while (n--)
-		temp_array[i++] = *cache_src++;
-	temp_array[i] = '\0';
-	i = 0;
-	while (temp_array[i] != '\0')
-		*cache_dest++ = temp_array[i++];
-	*cache_dest = '\0';
-	return (dest);
+	cache_dst = (unsigned char *)dst;
+	cache_src = (unsigned char *)src;
+	
+	if (cache_src < cache_dst)
+	{
+		while (len--)
+			cache_dst[len] = cache_src[len];
+	}
+	else
+		ft_memcpy(cache_dst, cache_src, len);
+	return (dst);
 }

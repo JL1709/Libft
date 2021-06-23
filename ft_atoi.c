@@ -6,9 +6,25 @@
 /*   By: jludt <jludt@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/16 15:34:53 by jludt             #+#    #+#             */
-/*   Updated: 2021/06/22 10:57:20 by jludt            ###   ########.fr       */
+/*   Updated: 2021/06/23 13:36:20 by jludt            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+static int	start(char *str)
+{
+	int	i; 
+	
+	i = 0;
+	while (1)
+	{
+		if (str[i] == ' ' || str[i] == '\t' || str[i] == '\v') 
+			i++;
+		else if (str[i] == '\f' || str[i] == '\r' || str[i] == '\n')
+			i++;
+		else
+			return (i);
+	}
+}
 
 int	ft_atoi(const char *str)
 {
@@ -16,9 +32,7 @@ int	ft_atoi(const char *str)
 	int	sign;
 	int	number;
 
-	i = 0;
-	while (str[i] == ' ')
-		i++;
+	i = start((char *)str);
 	sign = 1;
 	if (str[i] == '-')
 		sign = -1;

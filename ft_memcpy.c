@@ -6,7 +6,7 @@
 /*   By: jludt <jludt@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/19 13:21:45 by julian            #+#    #+#             */
-/*   Updated: 2021/06/22 11:35:48 by jludt            ###   ########.fr       */
+/*   Updated: 2021/06/23 12:23:05 by jludt            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,15 +19,16 @@
 ** return value: a pointer to dest.
 */
 
-void	*ft_memcpy(void *dest, const void *src, size_t n)
+void	*ft_memcpy(void *restrict dst, const void *restrict src, size_t n)
 {
-	unsigned char		*cache_dest;
-	const unsigned char	*cache_src;
+	unsigned char			*cache_dst;
+	const unsigned char		*cache_src;
 
-	cache_dest = dest;
-	cache_src = src;
+	cache_dst = (unsigned char *)dst;
+	cache_src = (unsigned char *)src;
+	if (cache_dst == '\0' && cache_src == '\0')
+		return (dst);
 	while (n--)
-		*cache_dest++ = *cache_src++;
-	*cache_dest = '\0';
-	return (dest);
+		*cache_dst++ = *cache_src++;
+	return (dst);
 }
