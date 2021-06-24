@@ -6,7 +6,7 @@
 /*   By: jludt <jludt@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/16 11:37:02 by jludt             #+#    #+#             */
-/*   Updated: 2021/06/23 14:19:59 by jludt            ###   ########.fr       */
+/*   Updated: 2021/06/24 13:28:14 by jludt            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,16 +24,18 @@
 ** to create. For strlcpy() that means the length of src.
 */
 
-size_t	ft_strlcpy(char * restrict dst, const char * restrict src, size_t dstsize)
+size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
 	size_t	length;
 	size_t	i;
-	
+
+	if (dst == 0 || src == 0)
+		return (0);
 	length = ft_strlen(src);
-	i = 0;
 	if (dstsize == 0)
 		return (length);
-	while (dst[i] != '\0' && i < (dstsize - 1) && i < length)
+	i = 0;
+	while (src[i] != '\0' && i < (dstsize - 1))
 	{
 		dst[i] = src[i];
 		i++;

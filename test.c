@@ -6,7 +6,7 @@
 /*   By: jludt <jludt@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/16 10:40:04 by jludt             #+#    #+#             */
-/*   Updated: 2021/06/23 11:15:33 by jludt            ###   ########.fr       */
+/*   Updated: 2021/06/24 17:42:16 by jludt            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,35 +14,43 @@
 
 //Necessary libraries to run tests
 #include <stdio.h>
+#include <stddef.h>
 #include <string.h>
 // #include <bsd/string.h>
 #include <ctype.h>
 #include <stdlib.h>
 
 //Prototypes of functions which shell be tested
-size_t  ft_strlen(const char *s);
-size_t  ft_strlcpy(char *dst, const char *src, size_t size);
-size_t  ft_strlcat(char *dst, const char *src, size_t size);
-int     ft_tolower(int c);
-int     ft_toupper(int c);
-int     ft_isprint(int c);
-int     ft_isascii(int c);
-int     ft_isalpha(int c);
-int     ft_isdigit(int c);
-int     ft_isalnum(int c);
-int     ft_atoi(const char *str);
-void    *ft_memset(void *s, int c, size_t n);
-void    ft_bzero(void *s, size_t n);
-void    *ft_memcpy(void *dest, const void *src, size_t n);
-void    *ft_memccpy(void *dest, const void *src, int c, size_t n);
-void    *ft_memmove(void *dest, const void *src, size_t n);
-void    *ft_memchr(const void *s, int c, size_t n);
-int     ft_memcmp(const void *s1, const void *s2, size_t n);
-char    *ft_strchr(const char *s, int c);
-char    *ft_strrchr(const char *s, int c);
-char    *ft_strnstr(const char *big, const char *little, size_t len);
-int     ft_strncmp(const char *s1, const char *s2, size_t n);
-char    *ft_strdup(const char *s);
+int		ft_atoi(const char *str);
+void	ft_bzero(void *s, size_t n);
+void	ft_bzero(void *s, size_t n);
+void	*ft_calloc(size_t count, size_t size);
+int		ft_isalnum(int c);
+int		ft_isalpha(int c);
+int		ft_isascii(int c);
+int		ft_isdigit(int c);
+int		ft_isprint(int c);
+void	*ft_memccpy(void *dest, const void *src, int c, size_t n);
+void	*ft_memchr(const void *s, int c, size_t n);
+int		ft_memcmp(const void *s1, const void *s2, size_t n);
+void	*ft_memcpy(void *dst, const void *src, size_t n);
+void	*ft_memmove(void *dst, const void *src, size_t len);
+void	*ft_memset(void *b, int c, size_t len);
+char	*ft_strchr(const char *s, int c);
+char	*ft_strdup(const char *s1);
+char	*ft_strjoin(char const *s1, char const *s2);
+// size_t	ft_strlcat(char *dst, const char *src, size_t dstsize);
+// size_t	strlcpy(char *dst, const char *src, size_t dstsize);
+size_t	ft_strlen(const char *s);
+int		ft_strncmp(const char *s1, const char *s2, size_t n);
+char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
+char	*ft_strrchr(const char *s, int c);
+char	*ft_strtrim(char const *s1, char const *set);
+char	*ft_substr(char const *s, unsigned int start, size_t len);
+int		ft_tolower(int c);
+int		ft_toupper(int c);
+char	**ft_split(char const *s, char c);
+char	*ft_itoa(int n);
 
 
 int main(void)
@@ -370,16 +378,16 @@ int main(void)
     // printf("2147483647 = %i (atoi)\n", atoi("2147483647"));
     // printf("214748364842 = %i (atoi)\n", atoi("214748364842"));
     
-    printf("Test = %i\n", ft_atoi("Test"));
-    printf("1 = %i\n", ft_atoi("1"));
-    printf("+1 = %i\n", ft_atoi("+1"));
-    printf("-1 = %i\n", ft_atoi("-1"));
-    printf(" -1 = %i\n", ft_atoi(" -1"));
-    printf(" 1 = %i\n", ft_atoi(" 1"));
-    printf(" +1 = %i\n", ft_atoi(" +1"));
-    printf("  +1 = %i\n", ft_atoi("       +1"));
-    printf("123 = %i\n", ft_atoi("123"));
-    printf("-456378 = %i\n", ft_atoi("-456378")); 
+    // printf("Test = %i\n", ft_atoi("Test"));
+    // printf("1 = %i\n", ft_atoi("1"));
+    // printf("+1 = %i\n", ft_atoi("+1"));
+    // printf("-1 = %i\n", ft_atoi("-1"));
+    // printf(" -1 = %i\n", ft_atoi(" -1"));
+    // printf(" 1 = %i\n", ft_atoi(" 1"));
+    // printf(" +1 = %i\n", ft_atoi(" +1"));
+    // printf("  +1 = %i\n", ft_atoi("       +1"));
+    // printf("123 = %i\n", ft_atoi("123"));
+    // printf("-456378 = %i\n", ft_atoi("-456378")); 
 
     
     ////Testfunction for ft_memset
@@ -475,6 +483,23 @@ int main(void)
     // printf("%s (strdup)\n", strdup(s_strdup));
     // printf("%s (ft_strdup)\n", ft_strdup(s_strdup));
 
-    
+    // //Testfunction for ft_strdup
+	// char *s1 = "lorem \n ipsum \t dolor \n sit \t amet";
+	// char *set = " ";
+	// char *s1_trim = ft_strtrim(s1, set);
+	// printf("s1_trim =  %s\n", s1_trim);
+
+	// //Testfunction for ft_split
+	// char *s = "abcdefhji";
+	// char **split = ft_split(s, 'd');
+	// printf("s1 = %s\n", split[0]);
+	// printf("s1 = %s\n", split[1]);
+
+	// Testfunction for ft_itoa
+	int n = 0;
+	printf("%i = %s\n", n, ft_itoa(n));
+	char *i1 = ft_itoa(-623);
+	printf("-623 = %s\n", i1);
+	
 }
 

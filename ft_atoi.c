@@ -6,18 +6,18 @@
 /*   By: jludt <jludt@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/16 15:34:53 by jludt             #+#    #+#             */
-/*   Updated: 2021/06/23 13:36:20 by jludt            ###   ########.fr       */
+/*   Updated: 2021/06/23 15:48:06 by jludt            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 static int	start(char *str)
 {
-	int	i; 
-	
+	int	i;
+
 	i = 0;
 	while (1)
 	{
-		if (str[i] == ' ' || str[i] == '\t' || str[i] == '\v') 
+		if (str[i] == ' ' || str[i] == '\t' || str[i] == '\v')
 			i++;
 		else if (str[i] == '\f' || str[i] == '\r' || str[i] == '\n')
 			i++;
