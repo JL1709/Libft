@@ -6,7 +6,7 @@
 /*   By: jludt <jludt@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/20 16:51:58 by julian            #+#    #+#             */
-/*   Updated: 2021/06/23 15:43:29 by jludt            ###   ########.fr       */
+/*   Updated: 2021/06/25 11:59:37 by jludt            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	len_dst = ft_strlen(dst);
 	len_src = ft_strlen(src);
 	if (dstsize <= len_dst)
-		return (len_dst + len_src - (len_dst - dstsize));
+		return (dstsize + len_src);
 	while (*dst != '\0')
 		dst++;
 	while (*src != '\0' && (dstsize - len_dst - 1) > 0)

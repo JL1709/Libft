@@ -6,7 +6,7 @@
 /*   By: jludt <jludt@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/16 10:40:04 by jludt             #+#    #+#             */
-/*   Updated: 2021/06/24 17:42:16 by jludt            ###   ########.fr       */
+/*   Updated: 2021/06/25 13:12:28 by jludt            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -490,16 +490,18 @@ int main(void)
 	// printf("s1_trim =  %s\n", s1_trim);
 
 	// //Testfunction for ft_split
-	// char *s = "abcdefhji";
-	// char **split = ft_split(s, 'd');
+	// char *s = "####abc###ef#hji#";
+	// char **split = ft_split(s, '#');
 	// printf("s1 = %s\n", split[0]);
 	// printf("s1 = %s\n", split[1]);
+	// printf("s1 = %s\n", split[2]);
+	// printf("s1 = %s\n", split[3]);
 
 	// Testfunction for ft_itoa
-	int n = 0;
-	printf("%i = %s\n", n, ft_itoa(n));
-	char *i1 = ft_itoa(-623);
-	printf("-623 = %s\n", i1);
+	// printf("%s\n", ft_itoa(0));
+	// printf("%s\n", ft_itoa(123456789));
+	// printf("%s\n", ft_itoa(-123456789));
+	printf("%s\n", ft_itoa(-2147483648));
 	
 }
 
