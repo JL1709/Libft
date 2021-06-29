@@ -6,7 +6,7 @@
 /*   By: jludt <jludt@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/25 16:13:20 by jludt             #+#    #+#             */
-/*   Updated: 2021/06/25 16:19:50 by jludt            ###   ########.fr       */
+/*   Updated: 2021/06/29 10:21:34 by jludt            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,12 +21,14 @@ parameters:
 
 int	ft_lstsize(t_list *lst)
 {
-	int	i;
+	t_list	*tmp;
+	int		i;
 
+	tmp = lst;
 	i = 0;
-	while (lst != NULL)
+	while (tmp != NULL)
 	{
-		lst = lst -> next;
+		tmp = tmp->next;
 		i++;
 	}
 	return (i);

@@ -1,28 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd_front.c                                  :+:      :+:    :+:   */
+/*   ft_lstdelone.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jludt <jludt@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/06/25 15:34:33 by jludt             #+#    #+#             */
-/*   Updated: 2021/06/29 10:08:06 by jludt            ###   ########.fr       */
+/*   Created: 2021/06/29 10:37:10 by jludt             #+#    #+#             */
+/*   Updated: 2021/06/29 10:46:06 by jludt            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdlib.h>
 #include "libft.h"
 
 /*
-** Adds the element ’new’ at the beginning of the list.
+** Takes as a parameter an element and frees the memory of the element’s 
+** content using the function ’del’ given as a parameter and free the element.
+** The memory of ’next’ must not be freed.
 ** parameters:
-** lst - The address of a pointer to the first link of a list.
-** new - The address of a pointer to the element to be
-**       added to the list.
+** lst - The element to free.
+** del - The address of the function used to delete the content.
 ** return value: none
 */
 
-void	ft_lstadd_front(t_list **lst, t_list *new)
+void	ft_lstdelone(t_list *lst, void (*del)(void*))
 {
-	new->next = *lst;
-	*lst = new;
+	if (lst != NULL)
+	{
+		(*del)(lst->content);
+		free (lst);
+	}
 }

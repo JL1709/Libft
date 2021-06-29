@@ -1,28 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd_front.c                                  :+:      :+:    :+:   */
+/*   ft_lstiter.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jludt <jludt@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/06/25 15:34:33 by jludt             #+#    #+#             */
-/*   Updated: 2021/06/29 10:08:06 by jludt            ###   ########.fr       */
+/*   Created: 2021/06/29 10:54:07 by jludt             #+#    #+#             */
+/*   Updated: 2021/06/29 10:57:19 by jludt            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-** Adds the element ’new’ at the beginning of the list.
+** Iterates the list ’lst’ and applies the function’f’ 
+** to the content of each element.
 ** parameters:
-** lst - The address of a pointer to the first link of a list.
-** new - The address of a pointer to the element to be
-**       added to the list.
-** return value: none
+** lst - The adress of a pointer to an element.
+** f - The adress of the function used to iterate on the list.
+** return value: None
 */
 
-void	ft_lstadd_front(t_list **lst, t_list *new)
+void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
-	new->next = *lst;
-	*lst = new;
+	t_list	*tmp;
+
+	tmp = lst;
+	if (tmp != NULL)
+	{
+		while (tmp != NULL)
+		{
+			(*f)(tmp->content);
+			tmp = tmp->next;
+		}
+	}	
 }

@@ -6,7 +6,7 @@
 /*   By: jludt <jludt@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/25 15:03:47 by jludt             #+#    #+#             */
-/*   Updated: 2021/06/25 15:32:16 by jludt            ###   ########.fr       */
+/*   Updated: 2021/06/29 10:08:02 by jludt            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,12 +24,12 @@
 
 t_list	*ft_lstnew(void *content)
 {
-	t_list	*n;
+	t_list	*new;
 
-	n = malloc(sizeof(t_list));
-	if (n == NULL)
+	new = malloc(sizeof(t_list));
+	if (new == NULL)
 		return (NULL);
-	n -> content = content;
-	n -> next = NULL;
-	return (n);
+	new->content = content;
+	new->next = NULL;
+	return (new);
 }

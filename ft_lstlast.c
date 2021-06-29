@@ -6,7 +6,7 @@
 /*   By: jludt <jludt@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/25 16:22:00 by jludt             #+#    #+#             */
-/*   Updated: 2021/06/25 16:29:28 by jludt            ###   ########.fr       */
+/*   Updated: 2021/06/29 11:21:06 by jludt            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,11 +21,14 @@
 
 t_list	*ft_lstlast(t_list *lst)
 {
-	while (lst != NULL)
+	t_list	*tmp;
+
+	tmp = lst;
+	while (tmp != NULL)
 	{
-		if (lst -> next == NULL)
-			return (lst);
-		lst = lst -> next;
+		if (tmp->next == NULL)
+			return (tmp);
+		tmp = tmp->next;
 	}
-	return (NULL);
+	return (tmp);
 }
