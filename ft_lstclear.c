@@ -6,11 +6,10 @@
 /*   By: jludt <jludt@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/29 10:46:45 by jludt             #+#    #+#             */
-/*   Updated: 2021/06/29 10:51:02 by jludt            ###   ########.fr       */
+/*   Updated: 2021/06/30 10:53:52 by jludt            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include "libft.h"
 
 /*
@@ -33,5 +32,4 @@ void	ft_lstclear(t_list **lst, void (*del)(void*))
 		ft_lstdelone(*lst, del);
 		*lst = tmp;
 	}
-	*lst = NULL;
 }

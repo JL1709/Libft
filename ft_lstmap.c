@@ -1,4 +1,15 @@
-#include <stdlib.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_lstmap.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jludt <jludt@student.42.fr>                +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/06/30 11:05:18 by jludt             #+#    #+#             */
+/*   Updated: 2021/06/30 11:06:03 by jludt            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 /*
@@ -22,13 +33,11 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	list_new = NULL;
 	while (lst != NULL)
 	{
-		add_new = ft_lstnew((*f)(lst->content));
+		add_new = ft_lstnew(f(lst->content));
 		if (add_new == NULL)
-		{
-			(*del)(list_new);
-			return (list_new);
-		}
-		ft_lstadd_back(&list_new, add_new);
+			ft_lstclear(&list_new, del);
+		else
+			ft_lstadd_back(&list_new, add_new);
 		lst = lst->next;
 	}
 	return (list_new);

@@ -6,7 +6,7 @@
 /*   By: jludt <jludt@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/29 10:54:07 by jludt             #+#    #+#             */
-/*   Updated: 2021/06/29 10:57:19 by jludt            ###   ########.fr       */
+/*   Updated: 2021/06/30 10:58:26 by jludt            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,12 +26,11 @@ void	ft_lstiter(t_list *lst, void (*f)(void *))
 	t_list	*tmp;
 
 	tmp = lst;
-	if (tmp != NULL)
+	if (lst == NULL || f == NULL)
+		return ;
+	while (tmp != NULL)
 	{
-		while (tmp != NULL)
-		{
-			(*f)(tmp->content);
-			tmp = tmp->next;
-		}
-	}	
+		f(tmp->content);
+		tmp = tmp->next;
+	}
 }
