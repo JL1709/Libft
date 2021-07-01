@@ -6,42 +6,42 @@
 #    By: jludt <jludt@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/06/22 09:51:20 by jludt             #+#    #+#              #
-#    Updated: 2021/06/30 11:21:16 by jludt            ###   ########.fr        #
+#    Updated: 2021/07/01 12:37:57 by jludt            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-CC = gcc
-CFLAGS = -c -Wall -Wextra -Werror
 NAME = libft.a
-SOURCES = 		ft_atoi.c ft_bzero.c ft_calloc.c ft_isalnum.c ft_isalpha.c \
-				ft_isascii.c ft_isdigit.c ft_isprint.c ft_itoa.c \
-				ft_memccpy.c ft_memchr.c ft_memcmp.c ft_memcpy.c \
-				ft_memmove.c ft_memset.c ft_putchar_fd.c \
-				ft_putendl_fd.c ft_putnbr_fd.c ft_putstr_fd.c \
-				ft_split.c ft_strchr.c ft_strdup.c ft_strjoin.c \
-				ft_strlcat.c ft_strlcpy.c ft_strlen.c ft_strmapi.c \
-				ft_strncmp.c ft_strnstr.c ft_strrchr.c ft_strtrim.c \
-				ft_substr.c ft_tolower.c ft_toupper.c
-SOURCES_BONUS = ft_lstadd_back.c ft_lstadd_front.c ft_lstclear.c \
-				ft_lstdelone.c ft_lstiter.c ft_lstlast.c ft_lstmap.c \
-				ft_lstnew.c ft_lstsize.c
-OBJECTS = $(SOURCES:.c=.o)
-OBJECTS_BONUS = $(SOURCES_BONUS:.c=.o)
 
-all : $(NAME)
+MANDATORY = ft_atoi.c ft_bzero.c ft_calloc.c ft_isalnum.c ft_isalpha.c \
+			ft_isascii.c ft_isdigit.c ft_isprint.c ft_itoa.c \
+			ft_memccpy.c ft_memchr.c ft_memcmp.c ft_memcpy.c \
+			ft_memmove.c ft_memset.c ft_putchar_fd.c \
+			ft_putendl_fd.c ft_putnbr_fd.c ft_putstr_fd.c \
+			ft_split.c ft_strchr.c ft_strdup.c ft_strjoin.c \
+			ft_strlcat.c ft_strlcpy.c ft_strlen.c ft_strmapi.c \
+			ft_strncmp.c ft_strnstr.c ft_strrchr.c ft_strtrim.c \
+			ft_substr.c ft_tolower.c ft_toupper.c
 
-$(NAME) : $(OBJECTS) bonus
-	ar cr $@ $(OBJECTS)
+BONUS = ft_lstadd_back.c ft_lstadd_front.c ft_lstclear.c \
+		ft_lstdelone.c ft_lstiter.c ft_lstlast.c ft_lstmap.c \
+		ft_lstnew.c ft_lstsize.c
 
-bonus : $(OBJECTS_BONUS)
-	ar cr $(NAME) $(OBJECTS_BONUS)
+all: $(NAME)
 
-.PHONY : clean fclean re
+$(NAME):
+	gcc -c -Wall -Wextra -Werror *.c
+	ar cr $(NAME) *.o
 
-clean :
-	rm -f $(OBJECTS) $(OBJECTS_BONUS)
+bonus:
+	gcc -c -Wall -Wextra -Werror $(BONUS)
+	ar cr $(NAME) *.o
 
-fclean : clean
+.PHONY: clean fclean re
+
+clean:
+	rm -f *.o
+
+fclean: clean
 	rm -f $(NAME)
 
 re : fclean all
