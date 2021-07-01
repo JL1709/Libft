@@ -6,11 +6,11 @@
 /*   By: jludt <jludt@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/19 12:41:06 by julian            #+#    #+#             */
-/*   Updated: 2021/06/23 11:56:11 by jludt            ###   ########.fr       */
+/*   Updated: 2021/07/01 11:37:19 by jludt            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include "libft.h"
 
 /*
 ** The bzero() function writes n zeroed bytes to the string s.  

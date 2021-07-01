@@ -6,11 +6,11 @@
 /*   By: jludt <jludt@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/18 18:05:33 by julian            #+#    #+#             */
-/*   Updated: 2021/06/23 12:27:55 by jludt            ###   ########.fr       */
+/*   Updated: 2021/07/01 11:38:37 by jludt            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include "libft.h"
 
 /*
 ** The memset() function writes len bytes of value 

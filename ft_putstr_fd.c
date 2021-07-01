@@ -6,11 +6,11 @@
 /*   By: jludt <jludt@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/24 17:54:20 by jludt             #+#    #+#             */
-/*   Updated: 2021/06/24 18:09:34 by jludt            ###   ########.fr       */
+/*   Updated: 2021/07/01 11:39:13 by jludt            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "libft.h"
 
 /*
 ** Outputs the string ’s’ to the given file descriptor.

@@ -6,11 +6,11 @@
 /*   By: jludt <jludt@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/19 13:21:45 by julian            #+#    #+#             */
-/*   Updated: 2021/06/29 09:43:00 by jludt            ###   ########.fr       */
+/*   Updated: 2021/07/01 11:38:27 by jludt            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include "libft.h"
 
 /*
 ** The memcpy() function copies n bytes from memory area src to memory 

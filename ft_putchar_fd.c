@@ -6,11 +6,11 @@
 /*   By: jludt <jludt@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/24 17:49:37 by jludt             #+#    #+#             */
-/*   Updated: 2021/06/24 17:53:19 by jludt            ###   ########.fr       */
+/*   Updated: 2021/07/01 11:38:56 by jludt            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "libft.h"
 
 /*
 ** Outputs the character ’c’ to the given file descriptor.

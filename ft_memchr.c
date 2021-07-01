@@ -6,11 +6,11 @@
 /*   By: jludt <jludt@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/20 09:38:58 by julian            #+#    #+#             */
-/*   Updated: 2021/06/22 11:30:19 by jludt            ###   ########.fr       */
+/*   Updated: 2021/07/01 11:38:17 by jludt            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include "libft.h"
 
 /*
 ** The  memchr()  function  scans the initial n bytes of the memory area 

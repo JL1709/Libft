@@ -6,11 +6,11 @@
 /*   By: jludt <jludt@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/24 18:12:06 by jludt             #+#    #+#             */
-/*   Updated: 2021/06/25 09:05:46 by jludt            ###   ########.fr       */
+/*   Updated: 2021/07/01 11:39:03 by jludt            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "libft.h"
 
 /*
 ** Outputs the string ’s’ to the given file

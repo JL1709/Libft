@@ -6,11 +6,11 @@
 /*   By: jludt <jludt@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/21 08:50:15 by julian            #+#    #+#             */
-/*   Updated: 2021/06/23 15:52:57 by jludt            ###   ########.fr       */
+/*   Updated: 2021/07/01 11:35:27 by jludt            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include "libft.h"
 
 /*
 ** strnstr — locate a substring in a string
@@ -27,29 +27,26 @@
 
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
-	static size_t	i = 0;
-	size_t			j;
-	int				k;
+	size_t	i;
+	size_t	j;
 
-	if (*needle == 0)
+	if (needle[0] == '\0')
 		return ((char *)haystack);
+	i = 0;
 	while (i < len && haystack[i] != '\0')
 	{
-		j = 0;
-		k = 0;
-		while (needle[j] != '\0' && k != 1)
+		if (needle[0] == haystack[i])
 		{
-			if (len == 0 && needle[j + 1] != '\0')
-				return (NULL);
-			if (i + j == len)
-				return (NULL);
-			if (needle[j] != haystack[i + j])
-				k = 1;
-			j++;
+			j = 0;
+			while (needle[j] != '\0' && haystack[i + j] == needle[j]
+				&& i + j < len)
+			{
+				j++;
+			}	
+			if (needle[j] == '\0')
+				return ((char *)&haystack[i]);
 		}
-		if (k == 0)
-			return ((char *)&haystack[i]);
 		i++;
 	}
-	return (NULL);
+	return (0);
 }
