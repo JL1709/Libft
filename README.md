@@ -4,7 +4,7 @@ This project aims to recode a few functions of the C standard library as well as
 This repo proides a C library regrouping usual functions that can be used for further projects. Therefore functions of the C standard library were recoded as well as some other utility functions.
 
 ## Supported functions
-> atoi		bzero	calloc  	isalnum isalpha isascii isdigit isprint itoa memccpy memchr memcmp memcpy
+> atoi, bzero, calloc, isalnum, isalpha, isascii, isdigit, isprint, itoa, memccpy, memchr, memcmp, memcpy  
 > memmove	memset	putchar_fd	putendl_fd putnbr_fd putstr_fd split strchr strdup strjoin
 strlcat strlcpy strlen strmapi
 strncmp strnstr strrchr strtrim
@@ -14,7 +14,7 @@ lstadd_back lstadd_front lstclear
 lstdelone lstiter lstlast lstmap
 lstnew lstsize
 		
-> Further explanations of what the funcitions are doing can be found inside the code
+Further explanations of what the funcitions are doing can be found inside the code
 
 
 ## Installation
