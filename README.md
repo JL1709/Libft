@@ -1,6 +1,35 @@
 # Libft
 This repo proides a C library regrouping usual functions that can be used for further projects. Therefore functions of the C standard library were recoded as well as some other utility functions.
 
+## Installation
+
+#### 1) Clone this repository 
+```
+git clone git@github.com:JL1709/Libft.git
+```
+
+#### 2) Execute Makfile (creates library file "libft.a")
+```
+cd Libft/
+make
+```
+
+#### 3)  Run program with library
+Include header file to you code
+```
+#include "pathToLibftFolder"/libft.h
+```
+
+Compile your code with library file, e.g.
+```
+gcc main.c libft.a
+```
+
+Run executable
+```
+./a.out
+```
+
 ## Supported functions
 - atoi
 - bzero
@@ -47,32 +76,3 @@ This repo proides a C library regrouping usual functions that can be used for fu
 - toupper
 		
 Further explanations about the functions can be found inside the code
-
-## Installation
-
-#### 1) Clone this repository 
-```
-git clone git@github.com:JL1709/Libft.git
-```
-
-#### 2) Execute Makfile (creates library file "libft.a")
-```
-cd Libft/
-make
-```
-
-#### 3)  Run program with library
-Include header file to you code
-```
-#include "pathToLibftFolder"/libft.h
-```
-
-Compile your code with library file, e.g.
-```
-gcc main.c libft.a
-```
-
-Run executable
-```
-./a.out
-```
