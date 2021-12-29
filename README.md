@@ -7,7 +7,7 @@ This repo proides a C library regrouping usual functions that can be used for fu
 > strlcpy, strlen, strmapi, strncmp, strnstr, strrchr, strtrim, substr, tolower, toupper  
 > lstadd_back, lstadd_front, lstclear, lstdelone, lstiter, lstlast, lstmap, lstnew, lstsize
 		
-Further explanations of what the funcitions are doing can be found inside the code
+Further explanations about the functions can be found inside the code
 
 ## Installation
 
