@@ -15,11 +15,11 @@ make
 ```
 
 #### 3)  Run program with library
-Include header file to you code (e.g. in main.c)
+Include header file to you code
 ```
 #include "pathToLibftFolder"/libft.h
 ```
-e.g.
+For example:
 ```ruby
 #include <stdio.h>
 #include "Libft/libft.h"
