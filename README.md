@@ -52,8 +52,8 @@ Further explanations about the functions can be found inside the code
 
 #### 1) Clone this repository 
 ```
-git clone git@github.com:muelea/selfcontact.git
-cd selfcontact
+git clone git@github.com:JL1709/Libft.git
+cd Libft
 ```
 
 #### 2) Execute Makfile
