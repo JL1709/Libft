@@ -53,13 +53,14 @@ Further explanations about the functions can be found inside the code
 #### 1) Clone this repository 
 ```
 git clone git@github.com:JL1709/Libft.git
-cd Libft
+cd Libft/
 ```
 
 #### 2) Execute Makfile
 ```
 make
 ```
+creates library file ("libft.a")
 
 #### 3)  Run program
 ```
