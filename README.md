@@ -22,7 +22,7 @@ Include header file to you code
 
 Compile your code with library file, e.g.
 ```
-gcc main.c libft.a
+gcc main.c "pathToLibftFolder"/libft.a
 ```
 
 Run executable
