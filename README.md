@@ -19,6 +19,18 @@ Include header file to you code (e.g. in main.c)
 ```
 #include "pathToLibftFolder"/libft.h
 ```
+e.g.
+```ruby
+#include <stdio.h>
+#include "Libft/libft.h"
+
+int main(void)
+{
+	printf("ft_strlen(\"test\") = %d\n", (int)ft_strlen("test"));
+
+	return (0);
+}
+```
 
 Compile your code with library file, e.g.
 ```
