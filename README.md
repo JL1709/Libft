@@ -11,6 +11,15 @@ This repo proides a C library regrouping usual functions that can be used for fu
 - isdigit
 - isprint
 - itoa
+- lstadd_back
+- lstadd_front
+- lstclear
+- lstdelone
+- lstiter
+- lstlast
+- lstmap
+- lstnew
+- lstsize
 - memccpy
 - memchr
 - memcmp
@@ -36,15 +45,6 @@ This repo proides a C library regrouping usual functions that can be used for fu
 - substr
 - tolower
 - toupper
-- lstadd_back
-- lstadd_front
-- lstclear
-- lstdelone
-- lstiter
-- lstlast
-- lstmap
-- lstnew
-- lstsize
 		
 Further explanations about the functions can be found inside the code
 
