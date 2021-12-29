@@ -2,7 +2,7 @@
 This repo proides a C library regrouping usual functions that can be used for further projects. Therefore functions of the C standard library were recoded as well as some other utility functions.
 
 ## Supported functions
-|     |     |
+| Supported functions |     |
 | --- | --- |  
 | test1 | test2 |
 
