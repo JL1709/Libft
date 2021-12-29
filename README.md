@@ -4,19 +4,17 @@ This project aims to recode a few functions of the C standard library as well as
 This repo proides a C library regrouping usual functions that can be used for further projects. Therefore functions of the C standard library were recoded as well as some other utility functions.
 
 ## Supported functions
-> atoi    bzero   calloc  isalnum isalpha
-> isascii isdigit isprint itoa
-			ft_memccpy.c ft_memchr.c ft_memcmp.c ft_memcpy.c \
-			ft_memmove.c ft_memset.c ft_putchar_fd.c \
-			ft_putendl_fd.c ft_putnbr_fd.c ft_putstr_fd.c \
-			ft_split.c ft_strchr.c ft_strdup.c ft_strjoin.c \
-			ft_strlcat.c ft_strlcpy.c ft_strlen.c ft_strmapi.c \
-			ft_strncmp.c ft_strnstr.c ft_strrchr.c ft_strtrim.c \
-			ft_substr.c ft_tolower.c ft_toupper.c
+> atoi		bzero	calloc  	isalnum isalpha isascii isdigit isprint itoa memccpy memchr memcmp memcpy
+> memmove	memset	putchar_fd	putendl_fd putnbr_fd putstr_fd split strchr strdup strjoin
+strlcat strlcpy strlen strmapi
+strncmp strnstr strrchr strtrim
+substr tolower toupper
 
-ft_lstadd_back.c ft_lstadd_front.c ft_lstclear.c \
-		ft_lstdelone.c ft_lstiter.c ft_lstlast.c ft_lstmap.c \
-		ft_lstnew.c ft_lstsize.c
+lstadd_back lstadd_front lstclear
+lstdelone lstiter lstlast lstmap
+lstnew lstsize
+		
+> Further explanations of what the funcitions are doing can be found inside the code
 
 
 ## Installation
