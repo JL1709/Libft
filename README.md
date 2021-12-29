@@ -61,7 +61,18 @@ cd Libft/
 make
 ```
 
-#### 3)  Run program
+#### 3)  Run program with library
+Include header file to you code
 ```
-./fdf
+#include "pathToLibftFolder"/libft.h
+```
+
+Compile your code with library file, e.g.
+```
+gcc main.c libft.a
+```
+
+Run executable
+```
+./a.out
 ```
