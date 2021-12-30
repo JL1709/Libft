@@ -17,7 +17,7 @@ make
 #### 3)  Run program with library
 Include header file to your code
 ```
-#include "pathToLibftFolder"/libft.h
+#include "pathToLibftFolder/libft.h"
 ```
 For example:
 ```ruby
