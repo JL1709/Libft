@@ -15,7 +15,7 @@ make
 ```
 
 #### 3)  Run program with library
-Include header file to you code
+Include header file to your code
 ```
 #include "pathToLibftFolder"/libft.h
 ```
