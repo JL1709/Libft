@@ -11,7 +11,7 @@ git clone git@github.com:JL1709/Libft.git
 
 #### 2) Run Makfile (creates library file "libft.a")
 ```
-cd Libft/
+cd Libft
 make
 ```
 
