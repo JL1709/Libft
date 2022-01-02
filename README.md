@@ -22,11 +22,14 @@ Include header file to your code
 For example:
 ```ruby
 #include <stdio.h>
-#include "Libft/libft.h"
+#include "pathToLibftFolder/libft.h"
 
 int main(void)
 {
-	printf("ft_strlen(\"test\") = %d\n", (int)ft_strlen("test"));
+	char	*src = "demo";
+	int	len_src = ft_strlen(src);
+	
+	printf("%s = %d\n", src, len_src);
 
 	return (0);
 }
@@ -41,6 +44,7 @@ Run executable
 ```
 ./a.out
 ```
+demo.c file provided for testing
 
 ## Supported functions
 - atoi
